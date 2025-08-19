@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEATREND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand" aria-label="SEATREND"><span class="sea">SEA</span><span class="trend">TREND</span></div>
+    <nav class="nav">
+      <a id="inquiryBtn" class="btn primary" href="https://open.kakao.com/o/sCgmH4Mh" target="_blank" rel="noopener">문의</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="notice" class="muted"></div>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <!-- Detail Modal -->
+  <div id="detailModal" class="modal" aria-hidden="true">
+    <div class="modal-dim" data-close></div>
+    <article class="modal-card">
+      <button class="modal-close" data-close aria-label="닫기">×</button>
+      <div class="detail-grid">
+        <div class="thumb large"><img id="d_img" alt=""></div>
+        <div class="d-info">
+          <h2 id="d_name" class="title"></h2>
+          <div class="tags" id="d_tags"></div>
+          <div class="detail-top-price">
+            <span class="cur" id="d_cur"></span>
+            <span class="amount" id="d_amt"></span>
+          </div>
+          <div class="muted" id="d_meta"></div>
+        </div>
+      </div>
+
+      <section class="detail-section">
+        <h3 class="detail-title">상세 설명</h3>
+        <div id="d_desc" class="detail-desc"></div>
+      </section>
+
+      <section class="detail-section">
+        <h3 class="detail-title">가격 & 바로가기</h3>
+        <div id="d_links" class="price-buttons"></div>
+        <div class="disclosure">* 일부 링크는 파트너스 링크일 수 있으며, 이를 통해 구매 시 SEATREND가 일정 수수료를 받을 수 있습니다.</div>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div>© 2025 SEATREND</div>
+  </footer>
+
+  <script src="assets/js/member.js" defer></script>
+</body>
+</html>

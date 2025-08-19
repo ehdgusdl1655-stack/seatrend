@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEATREND | 관리자 페이지</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/admin.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="assets/img/logo.svg" alt="SEATREND" style="height:30px" /></div>
+    <div class="actions">
+      <a class="btn" href="index.html" target="_blank">회원페이지 보기</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="toast"></div>
+
+    <section class="card">
+      <h2>상품 빠른 등록</h2>
+      <form id="form" class="form">
+        <div><label>제품명*</label><input id="name" class="input" required placeholder="예) SEATREND 클렌저"/></div>
+        <div><label>이미지 URL*</label><input id="image_url" class="input" required placeholder="https://"/></div>
+        <div><label>현지 판매가*</label><input id="local_price" class="input" required type="number" placeholder="숫자만"/></div>
+        <div><label>통화*</label>
+          <select id="currency" class="select">
+            <option>KRW</option><option>THB</option><option>MYR</option><option>PHP</option><option>VND</option><option>TWD</option><option>SGD</option><option>IDR</option>
+          </select>
+        </div>
+        <div><label>한화 표기(원)</label><input id="krw_price" class="input" type="number" placeholder="₩ 숫자(선택)"/></div>
+
+        <div style="grid-column:1/-1">
+          <details id="adv" class="card" style="border:none;padding:0;background:transparent">
+            <summary class="btn" style="border-radius:10px">고급 옵션 (선택)</summary>
+            <div class="form" style="margin-top:10px">
+              <div><label>카테고리</label>
+                <select id="category" class="select"><option></option><option>Beauty</option><option>Electronics</option><option>Health</option><option>Accessories</option><option>Fashion</option></select>
+              </div>
+              <div><label>국가(태그)</label><input id="country" class="input" placeholder="TH/MY/PH/VN/TW/SG/ID"/></div>
+              <div><label>정렬(등수)</label><input id="rank" class="input" type="number" placeholder="1~999"/></div>
+              <div><label>태그(쉼표)</label><input id="tags" class="input" placeholder="주문량 많음, 재고 확보 필요"/></div>
+              <div style="grid-column:1/-1"><label>상세설명</label><textarea id="desc" class="input" placeholder="회원 상세에 표시"></textarea></div>
+              <div style="grid-column:1/-1"><label>제품 URL(우선)</label><input id="product_url" class="input" placeholder="https://"/></div>
+              <div><label>쿠팡 가격</label><input id="coupang_price" class="input" type="number" placeholder="숫자"/></div>
+              <div><label>쿠팡 URL</label><input id="coupang_url" class="input" placeholder="https://coupang..."/></div>
+              <div><label>네이버 가격</label><input id="naver_price" class="input" type="number" placeholder="숫자"/></div>
+              <div><label>네이버 URL</label><input id="naver_url" class="input" placeholder="https://shopping.naver..."/></div>
+              <div><label>타사 라벨</label><input id="other_label" class="input" placeholder="올리브영"/></div>
+              <div><label>타사 가격</label><input id="other_price" class="input" type="number" placeholder="숫자"/></div>
+              <div><label>타사 URL</label><input id="other_url" class="input" placeholder="https://..."/></div>
+            </div>
+          </details>
+        </div>
+
+        <div style="grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end">
+          <button type="button" id="resetBtn" class="btn">새로 입력</button>
+          <button type="submit" class="btn primary">저장</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" style="margin-top:12px">
+      <h2>상품 목록</h2>
+      <table class="table" id="table"><thead><tr><th>정렬</th><th>제품명</th><th>가격</th><th>통화</th><th>관리</th></tr></thead><tbody></tbody></table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 SEATREND</div>
+    <div class="muted">관리자 전용</div>
+  </footer>
+</body>
+</html>

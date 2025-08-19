@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEATREND | 회원 페이지</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/member.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="assets/img/logo.svg" alt="SEATREND" style="height:30px" /></div>
+    <div class="actions">
+      <a id="inquiryBtn" class="btn" href="https://open.kakao.com/o/sCgmH4Mh">문의</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="catBar" style="margin-bottom:12px;display:none">
+      <div class="form" style="margin:0; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px;">
+        <div><label>카테고리</label><select id="flt_category" class="select"></select></div>
+<div><label>국가</label><select id="flt_country" class="select"></select></div>
+<div><label>태그</label><input id="flt_tags" class="input" placeholder="태그 포함"/></div>
+<div><label>제품명</label><input id="flt_name" class="input" placeholder="제품명 검색"/></div>
+      </div>
+    </section>
+    <div id="notice" class="muted" style="margin:6px 2px"></div>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 SEATREND</div>
+    <div class="muted">고객문의: help@sea-trend.com</div>
+  </footer>
+
+  <!-- Detail Modal -->
+  <div id="detailModal" class="modal">
+    <div class="backdrop" onclick="window.ST.closeDetail()"></div>
+    <div class="panel card">
+      <button class="btn close" onclick="window.ST.closeDetail()">닫기</button>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <script id="PRODUCTS_EMBED" type="application/json">[]</script>
+</body>
+</html>

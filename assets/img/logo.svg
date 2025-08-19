@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="185" height="40" viewBox="0 0 185 40">
+  <style>
+    .SEA{fill:#1f6fff;font:900 28px 'Inter','Segoe UI',Arial,sans-serif;letter-spacing:-0.5px}
+    .TREND{fill:#111827;font:900 28px 'Inter','Segoe UI',Arial,sans-serif;letter-spacing:-0.5px}
+  </style>
+  <text x="0" y="30" class="SEA">SEA</text>
+  <text x="63" y="30" class="TREND">TREND</text>
+</svg>
